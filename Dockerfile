@@ -18,7 +18,8 @@ LABEL maintainer="temikus" \
     org.label-schema.vcs-url="https://github.com/temikus/aria2-ariang-docker" \
     org.label-schema.vcs-type="Git" \
     org.label-schema.vendor="temikus" \
-    org.label-schema.schema-version="1.0"
+    org.label-schema.schema-version="1.0" \
+    org.opencontainers.image.source="https://github.com/temikus/aria2-ariang-docker"
 
 # Install required packages and clean up
 RUN apk --no-cache add darkhttpd aria2 curl su-exec && \
