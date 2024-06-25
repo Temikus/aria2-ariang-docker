@@ -1,6 +1,6 @@
 FROM alpine:3.20.1
 
-ARG ARIANG_VERSION
+ARG ARIANG_VERSION=1.3.7
 ARG BUILD_DATE
 ARG VCS_REF
 
@@ -31,7 +31,7 @@ WORKDIR /usr/local/www/ariang
 RUN mkdir -p /aria2/data /aria2/conf
 
 # Download and install AriaNg
-RUN wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/${ARIANG_VERSION}/AriaNg-${ARIANG_VERSION}.zip \
+RUN wget https://github.com/mayswind/AriaNg/releases/download/${ARIANG_VERSION}/AriaNg-${ARIANG_VERSION}.zip \
     -O ariang.zip \
     && unzip ariang.zip \
     && rm ariang.zip \
